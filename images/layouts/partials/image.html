@@ -38,7 +38,9 @@
     loading="{{ .Loading }}"
     decoding="async"
     src="{{ $imagePath | absURL }}"
-    srcset="{{ $impagePath2x | absURL }} 2x"
+    {{ if $impagePath2x }}
+      srcset="{{ $impagePath2x | absURL }} 2x"
+    {{ endif }}
     alt="{{ .Alt }}"
     class="{{ $class }} img"
     height="{{ $height }}"
