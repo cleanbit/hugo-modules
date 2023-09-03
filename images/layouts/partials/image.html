@@ -1,4 +1,5 @@
 {{ $imagePath:= .Src }}
+{{ $impagePath2x:= .Src2x }}
 {{ $image:= . }}
 {{ $class:= .Class }}
 {{ $size:= .Size }}
@@ -37,6 +38,7 @@
     loading="{{ .Loading }}"
     decoding="async"
     src="{{ $imagePath | absURL }}"
+    srcset="{{ $impagePath2x | absURL }} 2x"
     alt="{{ .Alt }}"
     class="{{ $class }} img"
     height="{{ $height }}"
